@@ -21,18 +21,20 @@ namespace XYZA.WebApi.Controllers.Api
         }
 
        
+        [HttpGet]
         public HttpResponseMessage  Get()
         {
             return Request.CreateResponse(HttpStatusCode.OK, _customerLayer.GetAllCustomer());      
         }
 
-
+        [HttpGet]
         public HttpResponseMessage Get(string id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, _customerLayer.GetCustomer(id));
         }
 
-        public HttpResponseMessage Post([FromBody] CustomerModels models) {
+        [HttpPost]
+        public HttpResponseMessage Post(CustomerModels models) {
             bool result = _customerLayer.AddCustomer(models);            
             if(result)
                 return Request.CreateResponse(HttpStatusCode.OK);
@@ -40,6 +42,7 @@ namespace XYZA.WebApi.Controllers.Api
               return  Request.CreateResponse(HttpStatusCode.InternalServerError);
         }
 
+        [HttpPut]
         public HttpResponseMessage Put(CustomerModels models) {
             bool result = _customerLayer.UpdateCustomer(models);
             if (result)
@@ -48,6 +51,7 @@ namespace XYZA.WebApi.Controllers.Api
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
         }
 
+        [HttpDelete]
         public HttpResponseMessage Delete(string id)
         {
             bool result = _customerLayer.DeleteCustomer(id);
@@ -56,5 +60,18 @@ namespace XYZA.WebApi.Controllers.Api
             else
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
         }
+
+       
+        [HttpDelete]
+        public HttpResponseMessage Delete(CustomerModels models)
+        {
+            bool result = _customerLayer.DeleteCustomer(models.Id);
+            if (result)
+                return Request.CreateResponse(HttpStatusCode.OK);
+            else
+                return Request.CreateResponse(HttpStatusCode.InternalServerError);
+        }
+
+
     }
 }

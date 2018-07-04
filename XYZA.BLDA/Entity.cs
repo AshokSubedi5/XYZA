@@ -13,5 +13,6 @@ namespace XYZA.BLDA
     {
         public Entity() : base("name=ConnectionStr") { }
         public DbSet<CustomerModels> Customers { get; set; }
+        public DbSet<EmailTemplate> EmailTemplate { get; set; }
     }
 }

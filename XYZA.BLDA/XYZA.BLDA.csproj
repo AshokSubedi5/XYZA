@@ -48,14 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerBLL.cs" />
+    <Compile Include="EmailTemplateBLL.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="Migrations\201803191825597_Initial.cs" />
-    <Compile Include="Migrations\201803191825597_Initial.Designer.cs">
-      <DependentUpon>201803191825597_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803271602246_Update database.cs" />
-    <Compile Include="Migrations\201803271602246_Update database.Designer.cs">
-      <DependentUpon>201803271602246_Update database.cs</DependentUpon>
+    <Compile Include="Migrations\201807041720527_initial.cs" />
+    <Compile Include="Migrations\201807041720527_initial.Designer.cs">
+      <DependentUpon>201807041720527_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,11 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803191825597_Initial.resx">
-      <DependentUpon>201803191825597_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803271602246_Update database.resx">
-      <DependentUpon>201803271602246_Update database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807041720527_initial.resx">
+      <DependentUpon>201807041720527_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

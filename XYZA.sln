@@ -9,6 +9,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZA.BLDA", "XYZA.BLDA\XYZA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZA.WebApi", "XYZA.WebApi\XYZA.WebApi.csproj", "{1B381111-EB59-4233-969B-242B98B7BDE9}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "XYZA.UI", "XYZA.UI\", "{02391D78-2FD0-4761-858C-9CAFBC04B5B1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54914"
+		Debug.AspNetCompiler.PhysicalPath = "XYZA.UI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54914\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54914"
+		Release.AspNetCompiler.PhysicalPath = "XYZA.UI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54914\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54914"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +47,10 @@ Global
 		{1B381111-EB59-4233-969B-242B98B7BDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B381111-EB59-4233-969B-242B98B7BDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B381111-EB59-4233-969B-242B98B7BDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02391D78-2FD0-4761-858C-9CAFBC04B5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02391D78-2FD0-4761-858C-9CAFBC04B5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02391D78-2FD0-4761-858C-9CAFBC04B5B1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{02391D78-2FD0-4761-858C-9CAFBC04B5B1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

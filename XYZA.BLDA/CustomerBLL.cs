@@ -46,12 +46,20 @@ namespace XYZA.BLDA
             try
             {
                 CustomerModels oldCustomer = _entity.Customers.Find(customer.Id);
+                
                 oldCustomer.FirstName = customer.FirstName;
+                oldCustomer.MiddleName = customer.MiddleName;
                 oldCustomer.LastName = customer.LastName;
-                oldCustomer.Address = customer.Address;
-                oldCustomer.Email = customer.Email;
-                oldCustomer.Modify_Date = DateTime.Now;
                 oldCustomer.Phone = customer.Phone;
+                oldCustomer.Email = customer.Email;
+                oldCustomer.Modify_Date = DateTime.UtcNow;
+                oldCustomer.State = customer.State;
+                oldCustomer.Country = customer.Country;
+                oldCustomer.City = customer.City;
+                oldCustomer.Address1 = customer.Address1;
+                oldCustomer.Address2 = customer.Address2;
+                oldCustomer.Facebook = customer.Facebook;
+                oldCustomer.Instagram = customer.Instagram;
                 oldCustomer.Remarks = customer.Remarks;
 
                 _entity.Entry(oldCustomer).State = EntityState.Modified;              
