@@ -24,6 +24,7 @@ namespace XYZA.WebApi.Controllers.Api
         [HttpGet]
         public HttpResponseMessage  Get()
         {
+           
             return Request.CreateResponse(HttpStatusCode.OK, _customerLayer.GetAllCustomer());      
         }
 
