@@ -1,0 +1,20 @@
+{
+  "successMailCount": 0,
+  "failedSendMailList": null,
+  "status": "In Progress",
+  "logs": [
+    "Started at : 05 Jul, 2018 03:50 PM",
+    "Send at : 05 Jul, 2018 03:50 PM",
+    "Send at : 05 Jul, 2018 03:50 PM",
+    "Send at : 05 Jul, 2018 03:50 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "Send at : 05 Jul, 2018 03:51 PM",
+    "end at : 05 Jul, 2018 03:51 PM"
+  ],
+  "totalCustomer": 0
+}

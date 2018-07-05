@@ -125,7 +125,7 @@ namespace XYZA.WebApi.Models
 
         public void SaveToJson(object data)
         {
-            var mappedPath = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/mail_log.json");
+            var mappedPath = System.Web.Hosting.HostingEnvironment.MapPath("~/Log/mail_log.json");
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);            
             // Write that JSON to txt file,  
             System.IO.File.WriteAllText(mappedPath, json);
