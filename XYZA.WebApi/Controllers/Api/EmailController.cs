@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -22,8 +23,20 @@ namespace XYZA.WebApi.Controllers.Api
     {
         private EmailTemplateBLL _templateLayer;
         private CustomerBLL _customerLayer;
+        Models.MailSettings _setting;
 
-        public EmailController() {
+        protected Models.MailSettings settings
+        {
+            get
+            {
+                if (_setting == null)
+                    return _setting = new Models.MailSettings();
+                return _setting;
+            }
+        }
+
+        public EmailController()
+        {
             _customerLayer = new CustomerBLL();
             _templateLayer = new EmailTemplateBLL();
         }
@@ -31,35 +44,19 @@ namespace XYZA.WebApi.Controllers.Api
         [HttpGet]
         public HttpResponseMessage Get(string id)
         {
-            if(id.ToLower() == "start")
+            if (id.ToLower() == "start")
             {
-                Models.MailSettings setting = new Models.MailSettings();
-                setting.SendMailAsync(_customerLayer.GetAllCustomer(),_templateLayer.GetEmailTemplate());
+                settings.SendMailAsync(_customerLayer.GetAllCustomer(), _templateLayer.GetEmailTemplate());
             }
-            else //for details
+            else if (id.ToLower() == "stop")
             {
+                settings.CancelMailAsync();
+            }
 
-            }
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
 
 
-        [HttpGet]
-        public  HttpResponseMessage Get(string id,string type)
-        {
-            MailResponse rawJsonFromDb = new MailResponse();
-            using (StreamReader r = new StreamReader(System.Web.Hosting.HostingEnvironment.MapPath("~/Log/mail_log.json")))
-            {
-                string json = r.ReadToEnd();
-                rawJsonFromDb = JsonConvert.DeserializeObject<MailResponse>(json);
-            }
-            return Request.CreateResponse(HttpStatusCode.OK, rawJsonFromDb);            
-        }
-
-
-
-        
-       
     }
 }

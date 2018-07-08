@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ashok.subedi5@gmail.com">
+
+    <title>Home - XYZA</title>
+
+    <!-- Local CSS -->
+    <!--<link href="content/css/bootstrap.css" rel="stylesheet">-->
+    <!--<link rel="stylesheet" href="content/font-awesome/css/font-awesome.min.css">-->
+
+    <!--CDN CSS-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!--Custom CSS -->
+    <link href="content/css/sb-admin.css" rel="stylesheet">     
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">XYZA</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+
+                    <li><a href="customer.html"><i class="fa fa-table"></i> Customer Setup</a></li>
+                    <li><a href="Template.html"><i class="fa fa-edit"></i> Template Setup</a></li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right navbar-user">
+
+                    <li class="dropdown user-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Ashok Subedi <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+
+                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>XYZA <small>Dashboard</small></h1>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html"><i class="icon-dashboard"></i> XYZA</a></li>
+                        <li class="active"><i class="icon-file-alt"></i> Dashboard</li>
+                    </ol>
+                </div>
+            </div><!-- /.row -->
+
+           
+            <!--Initial State-->
+            <div class="row">
+                <center><h3 class="message-label">Please Wait ...</h3>  <br /></center>
+                <div class="row progress-state sr-only">
+                    <div class="col-md-10 col-sm-10 col-xs-10">
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar text-center" style="width: 100%">45%</div>
+                        </div>
+                    </div>
+                </div>
+               
+
+                <div class="col-md-12">
+                    <img src="#" id="loading" class="img img-responsive center center-block sr-only" style="width:20%" />
+                </div>
+            </div>
+
+
+
+            <!--Progress State-->
+            <div class="row progress-state sr-only top-fix">
+                <div class="col-lg-9">
+                    <h3>Live Activity Info</h3>
+                    <div class="log-container">
+                        <span class="logs"></span>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+        </div><!-- /#page-wrapper -->
+
+
+    </div>
+
+
+    <!--Local JavaScript-->
+    <!--<script src="content/js/jquery-1.10.2.js"></script>
+    <script src="content/js/bootstrap.js"></script>-->
+
+    <!--CDN JavaScript-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>  
+
+    <!--Custom JavaScript-->
+    <script src="Content/js/pages/config.js"></script>
+    <script src="Content/js/pages/dashboard.js"></script>
+   <script>
+       dashboard.init();
+   </script>
+</body>
+</html>

@@ -157,3 +157,37 @@ table.tablesorter thead tr th:hover {
   }
 
 }
+
+.required{
+    color:red;
+}
+.br{
+    min-height:12px;
+}
+#loading:hover {
+    cursor: pointer;
+}
+
+.loading {
+    -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.top-fix {
+    margin-top: -100px;
+}
+
+.log-container {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll
+}

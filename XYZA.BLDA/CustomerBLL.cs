@@ -16,7 +16,7 @@ namespace XYZA.BLDA
             _entity = new Entity();
         }
         public IEnumerable<CustomerModels> GetAllCustomer() {
-            return _entity.Customers;
+            return _entity.Customers.Take(12);
         }
 
 
@@ -30,6 +30,7 @@ namespace XYZA.BLDA
             {
                 customer.Id = Guid.NewGuid().ToString();
                 customer.Created_Date = DateTime.Now;
+                customer.Modify_Date = DateTime.Now;
                 _entity.Customers.Add(customer);
                 _entity.SaveChanges();
                 return true;
